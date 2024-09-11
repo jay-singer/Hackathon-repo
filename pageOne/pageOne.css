@@ -138,7 +138,6 @@
 /*  media query */
 @media (max-width:770px) {
     .container{
-
         display: flex;
         width: fit-content;
         justify-content: space-between;

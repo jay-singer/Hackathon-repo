@@ -1,102 +1,137 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #ede6f7;
-    display: flex;
-    color: #343434;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
+  font-family: Arial, sans-serif;
+  background-color: #ede6f7;
+  display: flex;
+  color: #343434;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.form-container {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding: 30px;
+  overflow: hidden;
+  max-width: 600px; 
+}
+
+input[type="text"], input[type="password"], select {
+  padding: 10px;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+ 
+}
+
+form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.input-field {
+  display: flex;
   
+  width: 100%;
+  flex-direction: column;
+  gap: 6px;
+  
+}
+
+.input-field, .checkbox-field, .toggle-field, .radio-field, .dropdown-field {
+  margin-bottom: 20px;
+}
+
+.radio-field {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  margin-right: 10px;
+}
+
+label {
+  font-weight: 500;
+}
+
+small {
+  color: #888;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+}
+
+.dropdown-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input[type="text"].error {
+  border-color: red;
+}
+
+.button-group {
+  padding-top: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 40%;
+}
+
+button.cancel-btn {
+  background-color: #eee;
+  margin-right: 10px;
+}
+
+button.next-btn {
+  background-color: #a97aff;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Media Queries */
+
+/* Adjust for small screens (mobile devices) */
+@media (max-width: 600px) {
   .form-container {
-    background-color: white;
-   padding:0 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  input[type="text"], input[type="password"], select {
-    padding: 10px;
-    outline: none;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  form{
-    display: flex; 
-    padding: 20px;
-    flex-direction: column;
-    .input-field{
-        display: flex;
-        flex-direction: column;
-       
-        gap: 6px;
-        background-color: white;
-    }
-  }
-  
-  .input-field, .checkbox-field, .toggle-field, .radio-field, .dropdown-field {
-    margin-bottom: 20px;
+      padding: 20px;
+      margin-top: 0px;
   }
   .radio-field{
-    display: flex; 
-    gap: 20px;
-    flex-direction: row;
-  }
-  input[type="checkbox"], input[type="radio"] {
-    margin-right: 10px;
-  }
-  
-  label {
-    font-weight: 500;
-  }
-  
-  small {
-    color: #888;
-  }
-  
-  .error-message {
-    color: red;
-    font-size: 12px;
-  }
-  .dropdown-field{
-
-    display: flex;
     flex-direction: column;
-    gap: 10px;
   }
-  
-  
-  input[type="text"].error {
-    border-color: red;
-  }
-  .button-group{
-    padding-top: 10px;
-   align-items: center;
-    display: flex;
-    justify-content: space-between;
 
+  form {
+      padding: 6px;
+  width: 100%;
   }
+
+  .button-group {
+      flex-direction: column;
+      gap: 10px;
+  }
+
   button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 40%;
+      width: 100%;
   }
-  
-  button.cancel-btn {
-    background-color: #eee;
-    margin-right: 10px;
-  }
-  
-  button.next-btn {
-    background-color: #a97aff;
-    color: white;
-  }
-  
-  button:hover {
-    opacity: 0.9;
-  }
-  
-  
+}
